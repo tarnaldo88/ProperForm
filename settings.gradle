@@ -1,0 +1,2 @@
+rootProject.name='Proper Form'
+include ':app'
