@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Proper Form</string>
+    <string name="bg" />
+    <string name="rotateBtn" />
 </resources>
