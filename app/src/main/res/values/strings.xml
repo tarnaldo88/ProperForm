@@ -2,4 +2,7 @@
     <string name="app_name">Proper Form</string>
     <string name="bg" />
     <string name="rotateBtn" />
+    <string name="body" />
+    <string name="btn" />
+    <string name="rotate" />
 </resources>
