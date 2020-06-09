@@ -25,4 +25,20 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/properform_select_page" />
 
+    <ImageButton
+        android:id="@+id/RotateBtn"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorPrimary"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974"
+        app:srcCompat="@drawable/altrotate_btn"
+        android:contentDescription="@string/altrotateBtn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
