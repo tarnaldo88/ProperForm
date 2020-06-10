@@ -1,6 +1,7 @@
 package com.example.properform;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -41,13 +42,49 @@ public class Exercises extends AppCompatActivity {
         } else if (chosenWorkout[0].compareTo("shoulders") == 0){
             shoulderExercises();
         } else if (chosenWorkout[0].compareTo("back") == 0){
-            backWorkout();
+            backExercises();
         }
 
         BtnMoveBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
                 moveToMainActivity();
+            }
+        });
+
+        firstBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                chosenWorkout[1] = "first";
+                goToExercise();
+            }
+        });
+        secondBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                chosenWorkout[1] = "second";
+                goToExercise();
+            }
+        });
+        thirdBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                chosenWorkout[1] = "third";
+                goToExercise();
+            }
+        });
+        fourthBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                chosenWorkout[1] = "fourth";
+                goToExercise();
+            }
+        });
+        fifthBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                chosenWorkout[1] = "fifth";
+                goToExercise();
             }
         });
     }
@@ -57,19 +94,64 @@ public class Exercises extends AppCompatActivity {
         startActivity(goToMainActivity);;
     }
 
-    private void legsExercises(){
+    private void goToExercise(){
+        Intent goToWorout = new Intent(Exercises.this, Workout.class);
+        goToWorout.putExtra("workoutSelected", chosenWorkout);
+        startActivity(goToWorout);
+    }
 
+    private void legsExercises(){
+        //sets the title
+        area.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.legs_title));
+        //sets the buttons
+        firstBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.chest_press));
+        secondBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.incline_fly));
+        thirdBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.decline_press));
+        fourthBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.fly));
+        fifthBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.rev_fly));
     }
 
     private void armsExercises(){
-
+        //sets the title
+        area.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.arms_title));
+        //sets the buttons
+        firstBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.chest_press));
+        secondBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.incline_fly));
+        thirdBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.decline_press));
+        fourthBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.fly));
+        fifthBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.rev_fly));
     }
 
     private void chestExerices(){
-
+        //sets the title
+        area.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.chest_title));
+        //sets the buttons
+        firstBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.chest_press));
+        secondBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.incline_fly));
+        thirdBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.decline_press));
+        fourthBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.fly));
+        fifthBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.rev_fly));
     }
 
     private void shoulderExercises(){
+        //sets the title
+        area.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.shoulders_title));
+        //sets the buttons
+        firstBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.chest_press));
+        secondBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.incline_fly));
+        thirdBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.decline_press));
+        fourthBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.fly));
+        fifthBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.rev_fly));
+    }
 
+    private void  backExercises(){
+        //sets the title
+        area.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.back_title));
+        //sets the buttons
+        firstBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.chest_press));
+        secondBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.incline_fly));
+        thirdBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.decline_press));
+        fourthBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.fly));
+        fifthBtn.setImageDrawable(ContextCompat.getDrawable(Exercises.this, R.drawable.rev_fly));
     }
 }
