@@ -24,13 +24,15 @@ public class Exercises extends AppCompatActivity {
         setContentView(R.layout.activity_exercises);
 
         BtnMoveBack = findViewById(R.id.backMainActivityBtn);
+        area = findViewById(R.id.logo);
         firstBtn = findViewById(R.id.oneWork);
         secondBtn = findViewById(R.id.twobtn);
         thirdBtn = findViewById(R.id.threebtn);
         fourthBtn = findViewById(R.id.fourbtn);
         fifthBtn = findViewById(R.id.fifbtn);
 
-        chosenWorkout[0] = getIntent().getStringExtra("value");
+        String selected = getIntent().getStringExtra("value");
+        chosenWorkout[0] = selected;
 
         //if statements determining which body part was selected
         if (chosenWorkout[0].compareTo("legs") == 0){
