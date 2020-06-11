@@ -98,7 +98,8 @@ public class Exercises extends AppCompatActivity {
 
     private void goToExercise(){
         Intent goToWorout = new Intent(Exercises.this, Workout.class);
-        goToWorout.putExtra("workoutSelected", chosenWorkout);
+        goToWorout.putExtra("workoutSelected", chosenWorkout[1]);
+        goToWorout.putExtra("bodyPart", chosenWorkout[0]);
         startActivity(goToWorout);
     }
 
